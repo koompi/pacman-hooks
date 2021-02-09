@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Masking systemd targets to prevent interruption...
+When = PreTransaction
+Exec = /usr/bin/chown root:root /var /etc /usr /var/lib /var/log /opt
+
