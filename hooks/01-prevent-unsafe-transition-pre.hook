@@ -6,7 +6,7 @@ Type = Package
 Target = *
 
 [Action]
-Description = Masking systemd targets to prevent interruption...
+Description = Changing root directory permission to prevent unsafe during canonicalization
 When = PreTransaction
 Exec = /usr/bin/chown root:root /var /etc /usr /var/lib /var/log /opt
 
